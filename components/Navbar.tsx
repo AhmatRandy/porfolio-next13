@@ -25,24 +25,30 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex py-4 px-4 justify-between lg:flex-row md:flex-row sm:flex-col ">
-      <span>{active}</span>
-      <div className="flex flex-row space-x-4">
-        <NavItem active={active} setActive={setActive} name="Home" route="/" />
-        <NavItem
-          active={active}
-          setActive={setActive}
-          name="Resume"
-          route="/resume"
-        />
-        <NavItem
-          active={active}
-          setActive={setActive}
-          name="Project"
-          route="/project"
-        />
+    <>
+      <div className="w-full  flex flex-row space-x-2 py-2 px-2  bg-gradient-to-r from-purple-500 to-pink-500 rounded-t-md">
+        <div className="rounded-full w-[15px] h-[15px] bg-red-800" />
+        <div className="rounded-full w-[15px] h-[15px] bg-yellow-400" />
+        <div className="rounded-full w-[15px] h-[15px] bg-green-500" />
       </div>
-    </div>
+      <div className="flex flex-row gap-10 justify-center mt-2">
+        <Link href="/">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            Home
+          </span>
+        </Link>
+        <Link href="/project">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            Projects
+          </span>
+        </Link>
+        <Link href="/resume">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            Resume
+          </span>
+        </Link>
+      </div>
+    </>
   );
 };
 

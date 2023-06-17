@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div className="py-3 px-3">
       <h6 className="">
         I am currently pursuing B.Tech Degree(Final Year) in Computer Science
         Engineering from Academy of Technology. I have 3+ years of experience in

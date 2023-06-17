@@ -2,14 +2,23 @@ import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { GoArrowDown } from "react-icons/go";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import Image from "next/image";
 
 export default function Sidebar() {
-  const name = "<AhmatRandy/>";
+  const name = "<AhmatRandy />";
   return (
     <div>
-      <div></div>
-      <h3>
-        <span className="text-green">{name}</span>
+      <div className="flex justify-center">
+        <Image
+          src="/photo.png"
+          alt="logo"
+          width={100}
+          height={100}
+          className="object-contain rounded-full "
+        />
+      </div>
+      <h3 className=" mt-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-2 py-1 text-base my-3 rounded-full hover:">
+        <span className=" text-md">{name}</span>
       </h3>
       <p className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-2 py-1 text-base my-3 rounded-full ">
         Front end Engineer
@@ -32,7 +41,7 @@ ahmat-randy-1a306318b
         </a>
       </div>
 
-      <div className="bg-slate-300 text-base py-2 px-2 rounded-md">
+      <div className="bg-slate-300 text-base py-3 mt-2 px-2 rounded-md">
         <div className="flex flex-row space-x-1 justify-center items-center">
           <GoArrowDown className="text-red" />
           <p>Jakarta, Indonesia</p>
@@ -44,7 +53,7 @@ ahmat-randy-1a306318b
         </div>
       </div>
 
-      <div className="flex flex-col space-y-3 justify-center items-center ">
+      <div className="flex flex-col space-y-3 justify-center items-center py-2 ">
         <button className="py-2 px-2 rounded-3xl w-8/12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           Email me
         </button>
